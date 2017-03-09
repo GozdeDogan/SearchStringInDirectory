@@ -71,9 +71,9 @@ int main(int argc, char *argv[]){
     iSizeOfSearchStr = strlen(argv[1]);
     //printf("size:%d\n", iSizeOfSearchStr);
     if(argv[1] != NULL)
-        sSearchStr = (char*)calloc(strlen(argv[1]), sizeof(char));
+        sSearchStr = (char*)calloc((strlen(argv[1])+1), sizeof(char));
     
-    strncpy(sSearchStr, argv[1], (int)strlen(argv[1]));
+    strncpy(sSearchStr, argv[1], ((int)strlen(argv[1])+1));
     //fprintf(stderr, "sSearchStr:%s\tsize:%d\n", sSearchStr, iSizeOfSearchStr);
     
     //Outputlarin yazilacagi dosyayi actim
